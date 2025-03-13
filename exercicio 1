@@ -1,0 +1,40 @@
+#Exercício 1:
+#Escreva um algoritmo que leia as idades de 2 homens e de 2 mulheres (considere que as
+#idades dos homens serão sempre diferentes entre si, bem como as das mulheres). Calcule
+#e escreva a soma das idades do homem mais velho com a mulher mais nova, e o produto
+#das idades do homem mais novo com a mulher mais velha.
+
+
+idade1homem = int(input("Coloque aqui a idade do primeiro homem "))
+idade2homem = int(input("Coloque aqui a idade do segundo homem "))
+idade1mulher = int(input("Coloque aqui a idade da primeira mulher "))
+idade2mulher = int(input("Coloque aqui a idade da segunda mulher "))
+somaidadehomem = idade1homem + idade2homem
+somaidademulher = idade1mulher + idade2mulher
+
+
+if idade1homem > idade2homem:
+    maisvelho = idade1homem
+    maisnovo = idade2homem
+    print("O homem mais velho é o",maisvelho)
+else :
+     maisvelho = idade2homem
+     maisnovo = idade1homem
+     print ("O homem mais velho é o",maisvelho)
+     
+if idade1mulher > idade2mulher: 
+   maisvelha = idade1mulher
+   maisnova = idade2mulher
+   print("A mulher mais velha é",maisvelha)
+else:
+
+    maisvelha = idade2mulher
+    maisnova = idade1mulher
+    print("A mulher mais velha é",maisvelha)
+    
+
+somamaisvelhomaisnova= maisvelho + maisnova
+print ("A soma do homem mais velho com a mulher mais nova é de: ",somamaisvelhomaisnova,"anos")
+
+
+somamaisnovomaisvelha= maisnovo + maisvelha
