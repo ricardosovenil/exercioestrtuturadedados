@@ -1,0 +1,45 @@
+'''
+Um posto está vendendo combustíveis com a seguinte tabela de descontos:
+1. Álcool:
+a. até 20 litros, desconto de 3% por litro
+b. e acima de 20 litros, desconto de 5% por litro;
+2. Gasolina:
+a. até 20 litros, desconto de 4% por litro
+b. e acima de 20 litros, desconto de 6% por litro.
+
+Escreva um algoritmo que leia o número de litros vendidos, o tipo de combustível (A-
+álcool, G-gasolina) e imprima o valor a ser pago pelo cliente.
+
+Considere que o preço do litro da gasolina é R$ 5,15 e o preço do litro do álcool
+é R$ 4,29.
+'''
+
+combustivel = input("Informe o tipo de combustível:\n A-Alcool \n G-Gasolina")
+litros = int(input("Quantos litros você deseja? "))
+totalAlcool = litros * 4.29
+totalGasolina = litros * 5.15
+
+if combustivel.upper() == "A":
+    if litros <= 20:
+        descontoA3 =  totalAlcool * 3 / 100
+        totalAlcool = totalAlcool - descontoA3
+        print("Você comprou ",litros," de alcool, e pagou: ",totalAlcool)
+elif litros > 20:
+    descontoA5 = totalAlcool * 5 / 100
+    totalAlcool = totalAlcool - descontoA5
+    print("Você comprou ",litros," de alcool, e pagou: ",totalAlcool)
+    
+else:
+    print("O total a pagar é de", totalAlcool)
+
+
+if combustivel.upper() == "G":
+    if litros <= 20:
+        descontoA4 = totalGasolina * 4 / 100
+        totalGasolina = totalGasolina - descontoA4
+        print("Voce comprou ",litros,"de gasolina, e pagou: ", totalGasolina)
+elif litros > 20:
+   descontoA6 = totalGasolina * 6 / 100
+   totalGasolina = totalGasolina - descontoA6
+   print("Voce comprou ",litros,"de gasolina, e pagou: ", totalGasolina)
+   
